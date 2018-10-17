@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 class DynamicIntArrayMyTest {
 
     @Test
-    void initialize_array_without_size() {
+    void initialize_array_without_starting_size() {
         DynamicIntArray array = new DynamicIntArray();
     }
 }
