@@ -22,6 +22,16 @@ class DynamicIntArrayMyTest {
         });
     }
 
+    @Test
+    void returns_string_when_toString_invoked() {
+        DynamicIntArray array = this.initializeArray();
+
+        String expected = "";
+        String actual = array.toString();
+
+        assertEquals(expected.getClass(), actual.getClass());
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }
