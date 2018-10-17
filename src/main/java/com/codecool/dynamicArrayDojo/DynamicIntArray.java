@@ -19,7 +19,10 @@ public class DynamicIntArray {
 
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder(" ");
+        StringBuilder result = new StringBuilder("");
+        for (int element : array) {
+            result.append(" ").append(element);
+        }
         return result.toString();
     }
 }

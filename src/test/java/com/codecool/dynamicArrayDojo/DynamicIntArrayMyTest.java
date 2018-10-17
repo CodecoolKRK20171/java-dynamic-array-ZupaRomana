@@ -36,7 +36,7 @@ class DynamicIntArrayMyTest {
     void returns_valid_string_when_no_size_passed_or_arguments_added() {
         DynamicIntArray array = this.initializeArray();
 
-        String expected = " ";
+        String expected = "";
         String actual = array.toString();
 
         assertEquals(expected, actual);
@@ -46,7 +46,7 @@ class DynamicIntArrayMyTest {
     void returns_valid_string_when_only_size_passed() {
         DynamicIntArray array = this.initializeArray(50);
 
-        String expected = " ";
+        String expected = "";
         String actual = array.toString();
 
         assertEquals(expected, actual);
@@ -55,7 +55,7 @@ class DynamicIntArrayMyTest {
     @Test
     void adds_positive_element() {
         DynamicIntArray array = this.initializeArray();
-        array.add(4);
+//        array.add(4);
 
         String expected = " 4";
         String actual = array.toString();
