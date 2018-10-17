@@ -32,6 +32,16 @@ class DynamicIntArrayMyTest {
         assertEquals(expected.getClass(), actual.getClass());
     }
 
+    @Test
+    void returns_valid_string_when_no_ars_passed() {
+        DynamicIntArray array = this.initializeArray();
+
+        String expected = " ";
+        String actual = array.toString();
+
+        assertEquals(expected, actual);
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }
