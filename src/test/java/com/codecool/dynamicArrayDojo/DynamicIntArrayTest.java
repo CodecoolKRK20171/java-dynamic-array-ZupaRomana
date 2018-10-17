@@ -8,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.*;
 // Do not modify this file.
 class DynamicIntArrayTest {
 
-//    @Test
-//    void DynamicIntArrayTest_WithInitialSize() {
-//        new DynamicIntArray(15);
-//    }
-//
+    @Test
+    void DynamicIntArrayTest_WithInitialSize() {
+        new DynamicIntArray(15);
+    }
+
 //    @Test
 //    void addTest() {
 //        DynamicIntArray array = createArray(11);
