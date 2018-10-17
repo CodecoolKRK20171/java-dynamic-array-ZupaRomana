@@ -4,7 +4,9 @@ package com.codecool.dynamicArrayDojo;
 public class DynamicIntArray {
 
     private static final int STANDARD_SIZE = 0;
+
     private int[] array;
+    private int[] indexesUsed = new int[0];
 
     public DynamicIntArray() {
         this.array = new int[STANDARD_SIZE];
