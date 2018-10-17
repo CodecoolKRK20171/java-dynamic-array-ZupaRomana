@@ -16,7 +16,7 @@ class DynamicIntArrayMyTest {
     }
 
     @Test
-    void throws_exception_when_negative_size_passed() {
+    void throws_exception_when_negative_size_passed_to_constructor() {
         assertThrows(NegativeArraySizeException.class, () -> {
            DynamicIntArray array = new DynamicIntArray(-1);
         });
