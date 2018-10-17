@@ -13,15 +13,15 @@ class DynamicIntArrayTest {
         new DynamicIntArray(15);
     }
 
-//    @Test
-//    void addTest() {
-//        DynamicIntArray array = createArray(11);
-//        array.add(32);
-//        array.add(42);
-//        String result = " 0 1 2 3 4 5 6 7 8 9 10 32 42";
-//        assertEquals(result, array.toString());
-//    }
-//
+    @Test
+    void addTest() {
+        DynamicIntArray array = createArray(11);
+        array.add(32);
+        array.add(42);
+        String result = " 0 1 2 3 4 5 6 7 8 9 10 32 42";
+        assertEquals(result, array.toString());
+    }
+
 //    @Test
 //    void removeTest() {
 //        DynamicIntArray array = createArray(11);
@@ -59,12 +59,12 @@ class DynamicIntArrayTest {
 //        assertEquals(result, array.toString());
 //    }
 //
-//    private DynamicIntArray createArray(int numOfElements) {
-//        DynamicIntArray array = new DynamicIntArray();
-//        for (int i = 0; i < numOfElements; ++i)
-//        {
-//            array.add(i);
-//        }
-//        return array;
+    private DynamicIntArray createArray(int numOfElements) {
+        DynamicIntArray array = new DynamicIntArray();
+        for (int i = 0; i < numOfElements; ++i)
+        {
+            array.add(i);
+        }
+        return array;
 //    }
 }
