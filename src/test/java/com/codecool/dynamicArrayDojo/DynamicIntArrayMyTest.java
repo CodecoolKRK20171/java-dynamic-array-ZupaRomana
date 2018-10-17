@@ -33,7 +33,7 @@ class DynamicIntArrayMyTest {
     }
 
     @Test
-    void returns_valid_string_when_no_ars_passed() {
+    void returns_valid_string_when_no_size_passed_or_arguments_added() {
         DynamicIntArray array = this.initializeArray();
 
         String expected = " ";
