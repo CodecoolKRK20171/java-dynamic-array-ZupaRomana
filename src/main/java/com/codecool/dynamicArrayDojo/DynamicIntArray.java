@@ -19,6 +19,7 @@ public class DynamicIntArray {
 
     @Override
     public String toString() {
-        return "";
+        StringBuilder result = new StringBuilder(" ");
+        return result.toString();
     }
 }
