@@ -66,5 +66,5 @@ class DynamicIntArrayTest {
             array.add(i);
         }
         return array;
-//    }
+    }
 }

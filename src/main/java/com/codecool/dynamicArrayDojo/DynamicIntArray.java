@@ -3,7 +3,7 @@ package com.codecool.dynamicArrayDojo;
 // put your code here!
 public class DynamicIntArray {
 
-    private static final int STANDARD_SIZE = 20;
+    private static final int STANDARD_SIZE = 0;
     private int[] array;
 
     public DynamicIntArray() {
