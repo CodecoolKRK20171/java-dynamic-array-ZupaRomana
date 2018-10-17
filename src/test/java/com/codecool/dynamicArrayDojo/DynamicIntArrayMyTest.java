@@ -52,6 +52,17 @@ class DynamicIntArrayMyTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void adds_positive_element() {
+        DynamicIntArray array = this.initializeArray();
+        array.add(4);
+
+        String expected = " 4";
+        String actual = array.toString();
+
+        assertEquals(expected, actual);
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }
