@@ -16,4 +16,9 @@ public class DynamicIntArray {
         }
         this.array = new int[size];
     }
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }
