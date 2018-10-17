@@ -9,4 +9,8 @@ public class DynamicIntArray {
     public DynamicIntArray() {
         this.array = new int[STANDARD_SIZE];
     }
+
+    public DynamicIntArray(int size) {
+        this.array = new int[size];
+    }
 }
