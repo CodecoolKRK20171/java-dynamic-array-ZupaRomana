@@ -42,6 +42,16 @@ class DynamicIntArrayMyTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void returns_valid_string_when_only_size_passed() {
+        DynamicIntArray array = this.initializeArray(50);
+
+        String expected = " ";
+        String actual = array.toString();
+
+        assertEquals(expected, actual);
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }
