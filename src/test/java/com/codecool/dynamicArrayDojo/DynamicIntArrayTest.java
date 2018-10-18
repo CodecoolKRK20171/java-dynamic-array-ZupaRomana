@@ -22,23 +22,23 @@ class DynamicIntArrayTest {
         assertEquals(result, array.toString());
     }
 
-//    @Test
-//    void removeTest() {
-//        DynamicIntArray array = createArray(11);
-//        array.remove(5);
-//        array.remove(0);
-//        String result = " 1 2 3 4 6 7 8 9 10";
-//        assertEquals(result, array.toString());
-//    }
-//
-//    @Test
-//    void removeTest_LastItem()
-//    {
-//        DynamicIntArray array = createArray(10);
-//        array.remove(9);
-//        String result = " 0 1 2 3 4 5 6 7 8";
-//        assertEquals(result, array.toString());
-//    }
+    @Test
+    void removeTest() {
+        DynamicIntArray array = createArray(11);
+        array.remove(5);
+        array.remove(0);
+        String result = " 1 2 3 4 6 7 8 9 10";
+        assertEquals(result, array.toString());
+    }
+
+    @Test
+    void removeTest_LastItem()
+    {
+        DynamicIntArray array = createArray(10);
+        array.remove(9);
+        String result = " 0 1 2 3 4 5 6 7 8";
+        assertEquals(result, array.toString());
+    }
 //
 //    @Test
 //    void removeTest_InvalidItem()
