@@ -158,6 +158,19 @@ class DynamicIntArrayMyTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void remove_last_element() {
+        DynamicIntArray array = this.initializeArray();
+        int[] tempArray = new int[] {-3, 0, 8, 1, 10};
+        array.add(tempArray);
+        array.remove(4);
+
+        String expected = " -3 0 8 1";
+        String actual = array.toString();
+
+        assertEquals(expected, actual);
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }
