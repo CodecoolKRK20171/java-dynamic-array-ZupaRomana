@@ -182,6 +182,20 @@ class DynamicIntArrayMyTest {
         });
     }
 
+    @Test
+    void insert_test() {
+        DynamicIntArray array = this.initializeArray();
+        int[] tempArray = new int[] {3, 4, 1};
+        array.add(tempArray);
+        array.insert(3, -5);
+        array.insert(30, 30);
+
+        String expected = " 3, 4, 1, -5";
+        String actual = array.toString();
+
+        assertEquals(expected, actual);
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }
