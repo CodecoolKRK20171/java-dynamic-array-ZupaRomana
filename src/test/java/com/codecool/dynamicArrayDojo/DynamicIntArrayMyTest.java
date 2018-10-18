@@ -135,6 +135,16 @@ class DynamicIntArrayMyTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void throws_exception_when_null_integer_passed() {
+        DynamicIntArray array = this.initializeArray();
+        Integer num = null;
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            array.add(num);
+        });
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }
