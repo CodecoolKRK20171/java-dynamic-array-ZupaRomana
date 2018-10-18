@@ -78,9 +78,10 @@ class DynamicIntArrayMyTest {
     void adds_array() {
         DynamicIntArray array = this.initializeArray();
         int[] arrayToAdd = new int[] {3, 6, -1, 7};
+        array.add(arrayToAdd);
 
         String expected = " 3 6 -1 7";
-        String actual = array.add(arrayToAdd);
+        String actual = array.toString();
 
         assertEquals(expected, actual);
     }
