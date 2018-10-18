@@ -28,6 +28,18 @@ public class DynamicIntArray {
         }
     }
 
+    public void add(int element) {
+        this.size++;
+        Integer[] tempArray = new Integer[this.size];
+
+        for (int i = 0; i <= this.lastIndex; i++) {
+            tempArray[i] = this.array[i];
+        }
+
+        this.array = tempArray;
+        this.array[++lastIndex] = element;
+    }
+
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder("");
