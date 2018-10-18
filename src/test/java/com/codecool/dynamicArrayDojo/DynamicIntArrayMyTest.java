@@ -171,6 +171,21 @@ class DynamicIntArrayMyTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void remove_array_of_indexes_from_array() {
+        DynamicIntArray array = this.initializeArray();
+        int[] tempArray = new int[] {1, 3, 5, 1, 2};
+        int[] substractionIndexesArray = new int[] {5, 3, 2};
+
+        array.add(tempArray);
+        array.remove(substractionIndexesArray);
+
+        String expected = " 1 1";
+        String actual = array.toString();
+
+        assertEquals(expected, actual);
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }

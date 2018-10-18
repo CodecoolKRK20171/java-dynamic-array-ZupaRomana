@@ -72,6 +72,12 @@ public class DynamicIntArray {
         this.array = tempArray;
     }
 
+    public void remove(int[] elements) {
+        for (int element : elements) {
+            this.remove(element);
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder("");
