@@ -190,10 +190,18 @@ class DynamicIntArrayMyTest {
         array.insert(3, -5);
         array.insert(30, 30);
 
-        String expected = " 3, 4, 1, -5";
+        String expected = " 3 4 1 -5 30";
         String actual = array.toString();
 
         assertEquals(expected, actual);
+    }
+
+    @Test
+    void throws_exception_when_negative_index_passed() {
+        DynamicIntArray array = this.initializeArray();
+        assertThrows(IllegalArgumentException.class, () -> {
+            array.insert(-1, 55);
+        });
     }
 
     private DynamicIntArray initializeArray() {
