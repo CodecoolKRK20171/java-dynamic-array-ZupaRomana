@@ -48,17 +48,17 @@ class DynamicIntArrayTest {
         assertThrows(ArrayIndexOutOfBoundsException.class, () -> array.remove(-1));
     }
 
-//    @Test
-//    void insertTest()
-//    {
-//        DynamicIntArray array = createArray(11);
-//        array.insert(8, 223);
-//        array.insert(100, 654);
-//
-//        String result = " 0 1 2 3 4 5 6 7 223 8 9 10 654";
-//        assertEquals(result, array.toString());
-//    }
-//
+    @Test
+    void insertTest()
+    {
+        DynamicIntArray array = createArray(11);
+        array.insert(8, 223);
+        array.insert(100, 654);
+
+        String result = " 0 1 2 3 4 5 6 7 223 8 9 10 654";
+        assertEquals(result, array.toString());
+    }
+
     private DynamicIntArray createArray(int numOfElements) {
         DynamicIntArray array = new DynamicIntArray();
         for (int i = 0; i < numOfElements; ++i)
