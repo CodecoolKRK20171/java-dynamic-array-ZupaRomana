@@ -28,7 +28,11 @@ public class DynamicIntArray {
         }
     }
 
-    public void add(int element) {
+    public void add(Integer element) throws IllegalArgumentException {
+
+        if (element == null) {
+            throw new IllegalArgumentException();
+        }
         this.size++;
         Integer[] tempArray = new Integer[this.size];
 
