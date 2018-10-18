@@ -3,16 +3,19 @@ package com.codecool.dynamicArrayDojo;
 // put your code here!
 public class DynamicIntArray {
 
-    private static final int STARTING_ARRAY_SIZE = 0;
+    private static final int STARTING_ARRAY_SIZE_WITHOUT_SIZE_GIVEN = 0;
     private static final int STARTING_INDEX = 0;
+    private static final int STARTING_INDEX_WITH_ZERO_SIZE = -1;
+
 
     private Integer[] array;
     private int size;
     private int lastIndex;
 
     public DynamicIntArray() {
-        this.size = STARTING_ARRAY_SIZE;
+        this.size = STARTING_ARRAY_SIZE_WITHOUT_SIZE_GIVEN;
         this.array = new Integer[this.size];
+        this.lastIndex = STARTING_INDEX_WITH_ZERO_SIZE;
     }
 
     public DynamicIntArray(int size) throws NegativeArraySizeException {
@@ -21,7 +24,7 @@ public class DynamicIntArray {
         } else {
             this.size = size;
             this.array = new Integer[this.size];
-            this.lastIndex = size == 0 ? STARTING_INDEX - 1 : STARTING_INDEX;
+            this.lastIndex = size == 0 ? STARTING_INDEX_WITH_ZERO_SIZE : STARTING_INDEX;
         }
     }
 
