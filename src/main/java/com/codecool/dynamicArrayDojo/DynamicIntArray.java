@@ -46,6 +46,12 @@ public class DynamicIntArray {
         }
     }
 
+    public void add(Integer[] elements) {
+        for (Integer element : elements) {
+            this.add(element);
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder("");
