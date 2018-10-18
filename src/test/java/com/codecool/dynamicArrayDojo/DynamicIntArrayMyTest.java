@@ -145,6 +145,19 @@ class DynamicIntArrayMyTest {
         });
     }
 
+    @Test
+    void remove_element_with_index_passed() {
+        DynamicIntArray array = this.initializeArray();
+        int[] tempArray = new int[] {3, 6, 8, 2};
+        array.add(tempArray);
+        array.remove(2);
+
+        String expected = " 3 6 2";
+        String actual = array.toString();
+
+        assertEquals(expected, actual);
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }
