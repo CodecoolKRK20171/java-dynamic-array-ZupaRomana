@@ -56,6 +56,22 @@ public class DynamicIntArray {
         }
     }
 
+    public void remove(int index) {
+        this.size--;
+        Integer[] tempArray = new Integer[this.size];
+
+        for (int i = 0; i <= this.lastIndex; i++) {
+            if (i < index) {
+                tempArray[i] = this.array[i];
+            } else if (i > index) {
+                tempArray[i - 1] = this.array[i];
+            }
+        }
+
+        this.lastIndex--;
+        this.array = tempArray;
+    }
+
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder("");
