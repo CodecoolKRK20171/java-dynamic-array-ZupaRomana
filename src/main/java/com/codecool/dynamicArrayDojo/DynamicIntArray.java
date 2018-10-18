@@ -59,20 +59,55 @@ public class DynamicIntArray {
     public void remove(int index) throws ArrayIndexOutOfBoundsException{
         if (index > this.lastIndex || index < STARTING_INDEX) {
             throw new ArrayIndexOutOfBoundsException();
-        }
-        this.size--;
-        Integer[] tempArray = new Integer[this.size];
+        } else {
+            this.size--;
+            Integer[] tempArray = new Integer[this.size];
 
-        for (int i = 0; i <= this.lastIndex; i++) {
-            if (i < index) {
-                tempArray[i] = this.array[i];
-            } else if (i > index) {
-                tempArray[i - 1] = this.array[i];
+            for (int i = 0; i <= this.lastIndex; i++) {
+                if (i < index) {
+                    tempArray[i] = this.array[i];
+                } else if (i > index) {
+                    tempArray[i - 1] = this.array[i];
+                }
             }
-        }
 
-        this.lastIndex--;
-        this.array = tempArray;
+            this.lastIndex--;
+            this.array = tempArray;
+        }
+    }
+
+    public void insert(int index, int element) throws IllegalArgumentException {
+        if (index < 0) {
+            throw new IllegalArgumentException();
+        } else {
+            if (index <= this.lastIndex + 1) {
+                this.size++;
+            } else {
+                this.size = index + 1;
+            }
+            Integer[] tempArray = new Integer[this.size];
+
+            for (int i = 0; i <= this.lastIndex; i++) {
+                if (i < index) {
+                    tempArray[i] = this.array[i];
+                } else if (i == index) {
+                    tempArray[i] = element;
+                    tempArray[i + 1] = this.array[i];
+                } else {
+                    tempArray[i + 1] = this.array[i];
+                }
+            }
+
+            if (index > this.lastIndex) {
+                tempArray[index] = element;
+                this.lastIndex = index;
+            } else {
+                this.lastIndex++;
+            }
+
+            this.array = tempArray;
+
+        }
     }
 
     @Override
