@@ -4,11 +4,14 @@ package com.codecool.dynamicArrayDojo;
 public class DynamicIntArray {
 
     private static final int STARTING_ARRAY_SIZE = 0;
+    private static final int STARTING_LAST_INDEX_WITH_ZERO_SIZE = 0;
 
     private Integer[] array;
+    private int lastIndex;
 
     public DynamicIntArray() {
         this.array = new Integer[STARTING_ARRAY_SIZE];
+        this.lastIndex = STARTING_LAST_INDEX_WITH_ZERO_SIZE;
     }
 
     public DynamicIntArray(int size) throws NegativeArraySizeException {
@@ -17,6 +20,7 @@ public class DynamicIntArray {
         }
 
         this.array = new Integer[size];
+        this.lastIndex = size - 1;
     }
 
     @Override
