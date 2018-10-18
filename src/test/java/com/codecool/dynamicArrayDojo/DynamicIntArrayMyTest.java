@@ -98,6 +98,18 @@ class DynamicIntArrayMyTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void adds_wrapped_type_array() {
+        DynamicIntArray array = this.initializeArray();
+        Integer[] arrayToAdd = new Integer[] {3, 8, 11};
+        array.add(arrayToAdd);
+
+        String expected = " 3 8 11";
+        String actual = array.toString();
+
+        assertEquals(expected, actual);
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }
