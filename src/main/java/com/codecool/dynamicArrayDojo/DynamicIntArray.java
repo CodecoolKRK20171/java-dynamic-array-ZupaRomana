@@ -40,6 +40,12 @@ public class DynamicIntArray {
         this.array[++lastIndex] = element;
     }
 
+    public void add(int[] elements) {
+        for (int element : elements) {
+            this.add(element);
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder("");
