@@ -39,15 +39,15 @@ class DynamicIntArrayTest {
         String result = " 0 1 2 3 4 5 6 7 8";
         assertEquals(result, array.toString());
     }
-//
-//    @Test
-//    void removeTest_InvalidItem()
-//    {
-//        DynamicIntArray array = createArray(10);
-//        assertThrows(ArrayIndexOutOfBoundsException.class, () -> array.remove(10));
-//        assertThrows(ArrayIndexOutOfBoundsException.class, () -> array.remove(-1));
-//    }
-//
+
+    @Test
+    void removeTest_InvalidItem()
+    {
+        DynamicIntArray array = createArray(10);
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> array.remove(10));
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> array.remove(-1));
+    }
+
 //    @Test
 //    void insertTest()
 //    {
