@@ -171,6 +171,17 @@ class DynamicIntArrayMyTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void remove_item_with_passing_non_existing_index() {
+        DynamicIntArray array = this.initializeArray();
+        int[] tempArray = new int[] {3, 1, 6, -999};
+        array.add(tempArray);
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            array.remove(44);
+        });
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }
