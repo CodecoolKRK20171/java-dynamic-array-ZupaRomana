@@ -183,7 +183,7 @@ class DynamicIntArrayMyTest {
     }
 
     @Test
-    void insert_test() {
+    void insert_at_the_end_of_array() {
         DynamicIntArray array = this.initializeArray();
         int[] tempArray = new int[] {3, 4, 1};
         array.add(tempArray);
@@ -191,6 +191,20 @@ class DynamicIntArrayMyTest {
         array.insert(30, 30);
 
         String expected = " 3 4 1 -5 30";
+        String actual = array.toString();
+
+        assertEquals(expected, actual);
+    }
+
+
+    @Test
+    void insert_inside_array() {
+        DynamicIntArray array = this.initializeArray();
+        int[] tempArray = new int[] {3, 4, 1};
+        array.add(tempArray);
+        array.insert(0, -5);
+
+        String expected = " -5 3 4 1";
         String actual = array.toString();
 
         assertEquals(expected, actual);
