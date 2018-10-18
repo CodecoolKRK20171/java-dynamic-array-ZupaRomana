@@ -56,7 +56,10 @@ public class DynamicIntArray {
         }
     }
 
-    public void remove(int index) {
+    public void remove(int index) throws ArrayIndexOutOfBoundsException{
+        if (index > this.lastIndex || index < STARTING_INDEX) {
+            throw new ArrayIndexOutOfBoundsException();
+        }
         this.size--;
         Integer[] tempArray = new Integer[this.size];
 

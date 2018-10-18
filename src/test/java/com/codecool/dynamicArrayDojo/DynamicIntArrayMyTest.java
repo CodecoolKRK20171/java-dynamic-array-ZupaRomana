@@ -177,7 +177,7 @@ class DynamicIntArrayMyTest {
         int[] tempArray = new int[] {3, 1, 6, -999};
         array.add(tempArray);
 
-        assertThrows(IndexOutOfBoundsException.class, () -> {
+        assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
             array.remove(44);
         });
     }
