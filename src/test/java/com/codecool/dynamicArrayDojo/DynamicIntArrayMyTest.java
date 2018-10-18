@@ -63,6 +63,17 @@ class DynamicIntArrayMyTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void adds_negative_element() {
+        DynamicIntArray array = this.initializeArray();
+        array.add(-88);
+
+        String expected = " -88";
+        String actual = array.toString();
+
+        assertEquals(expected, actual);
+    }
+
     private DynamicIntArray initializeArray() {
         return new DynamicIntArray();
     }
